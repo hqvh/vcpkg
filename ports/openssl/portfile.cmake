@@ -15,7 +15,6 @@ vcpkg_from_github(
     PATCHES
         cmake-config.patch
         command-line-length.patch
-        script-prefix.patch
         windows/install-layout.patch
         windows/install-pdbs.patch
         windows/install-programs.diff # https://github.com/openssl/openssl/issues/28744
@@ -26,8 +25,6 @@ vcpkg_from_github(
 )
 
 vcpkg_list(SET CONFIGURE_OPTIONS
-    enable-static-engine
-    enable-capieng
     no-tests
     no-docs
 )
